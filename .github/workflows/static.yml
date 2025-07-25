@@ -1,12 +1,6 @@
 name: Static Checks
 
-push:
-  branches:
-    - 'main'
-    - 'release/**'
-    - '**/release/**'
-pull_request:
-  types: [opened, reopened, labeled, unlabeled, synchronize]
+on: [push, pull_request]
 
 env:
   CARGO_TERM_COLOR: always
